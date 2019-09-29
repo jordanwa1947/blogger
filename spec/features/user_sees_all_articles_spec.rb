@@ -8,10 +8,8 @@ describe 'User sees all articles' do
 
       visit '/articles'
 
-      expect(page).to have_content('Title 1')
-      expect(page).to have_content('Body 1')
-      expect(page).to have_content('Title 2')
-      expect(page).to have_content('Body 2')
+      expect(page).to have_link(article_1.title)
+      expect(page).to have_link(article_2.title)
     end
   end
 end
