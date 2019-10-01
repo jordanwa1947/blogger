@@ -1,6 +1,6 @@
 <h1> <%= @article.title %> </h1>
-<h4> Tags:
-  <%= @article.tags.each do |tag| %> </h4>
+<h4> Tags: </h4>
+  <% @article.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 <p> <%= @article.body %> </p>
