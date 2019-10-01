@@ -17,7 +17,8 @@ describe 'User Creates an Article' do
 
         expect(page).to have_content('New Article')
         expect(page).to have_content('body')
-        expect(page).to have_content('Tags: ruby, technology')
+        expect(page).to have_link('ruby')
+        expect(page).to have_link('technology')
       end
     end
   end
