@@ -9,7 +9,7 @@ describe "User views a Tag's Show Page" do
       visit article_path(article)
       click_link tag.name
 
-      expect(current_path).to eq(tag_path)
+      expect(current_path).to eq(tag_path(tag))
       expect(page).to have_content(article.title)
       expect(page).to have_content(tag.name)
     end
