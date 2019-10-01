@@ -11,11 +11,13 @@ describe 'User Creates an Article' do
 
         fill_in 'article[title]', with: 'New Article'
         fill_in 'article[body]', with: 'body'
+        fill_in 'article[tag_list]', with: 'ruby, technology'
 
         click_on 'Create Article'
 
         expect(page).to have_content('New Article')
         expect(page).to have_content('body')
+        expect(page).to have_content('tags: ruby, technology')
       end
     end
   end
