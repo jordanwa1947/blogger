@@ -1,5 +1,6 @@
+<h1> Articles </h1>
+<h2> <%= link_to 'Tags', tags_path %> </h2> 
 <ul id="articles">
-  <h1> Articles </h1>
   <% @articles.each do |article| %>
     <li>
       <h2> <%= link_to article.title, article_path(article), class: 'article-title'%> </h2>
