@@ -1,5 +1,8 @@
 <h1> <%= @article.title %> </h1>
-<h4> Tags: <%= @article.tag_list %> </h4>
+<h4> Tags:
+  <%= @article.tags.each do |tag| %> </h4>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
 <p> <%= @article.body %> </p>
 <h3> Comments(<%= @article.comments.size %>) </h3>
 
