@@ -9,7 +9,6 @@ class TagsController < ApplicationController
   end
 
   def destroy
-    binding.pry 
     Tag.destroy(params[:id])
     redirect_to tags_path
   end
